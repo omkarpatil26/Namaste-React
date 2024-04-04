@@ -2,24 +2,38 @@ import React from "react";
 
 class UserClass extends React.Component {
   constructor(props) {
+    console.log("child constructor");
     super(props);
 
     this.state = {
       count: 0,
-      count2: 2,
     };
-    console.log(props);
+    //console.log(props);
   }
+
+  componentDidMount() {
+    console.log("child component did mount");
+  }
+
   render() {
     const { name, location } = this.props;
-    const { count, count2 } = this.state;
+    const { count } = this.state;
+    console.log("child render ");
     return (
       <div className="user">
         <h2>count : {count}</h2>
-        <h2>count2 : {count2}</h2>
-        <h2>Name : Omi</h2>
-        <h2>location : pune</h2>
-        <h2>contact : omi26omi@gmail.com</h2>
+        <button
+          onClick={() => {
+            this.setState({
+              count: this.state.count + 1,
+            });
+          }}
+        >
+          Click me!
+        </button>
+        <h3>Name : Omi</h3>
+        <h3>location : pune</h3>
+        <h3>contact : omi26omi@gmail.com</h3>
       </div>
     );
   }
