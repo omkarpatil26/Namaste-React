@@ -39,9 +39,9 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
+      <div className="filter flex">
         <button
-          className="filterBtn"
+          className="m-4 p-4 px-4 py-2 bg-gray-200"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 3.9
@@ -53,13 +53,14 @@ const Body = () => {
         </button>
         <input
           type="text"
-          className="searchBox"
+          className="m-4 px-4 py-2 searchBox border border-solid border-black rounded-lg "
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         ></input>
         <button
+          className="px-4 py-2 bg-green-100 m-4 rounded-lg"
           onClick={() => {
             console.log(searchText);
             const filteredRestaurant = listOfRestaurants.filter((res) =>
@@ -72,7 +73,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link
             to={"/restaurant/" + restaurant.info.id}
