@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-import resObj from "../utils/mockData";
+//import resObj from "../utils/mockData";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -37,6 +37,8 @@ const Body = () => {
     return <h1>loading...</h1>;
   }
 
+  console.log("listOfRestaurants", listOfRestaurants);
+
   return (
     <div className="body">
       <div className="filter flex">
@@ -44,7 +46,7 @@ const Body = () => {
           className="m-4 p-4 px-4 py-2 bg-gray-200"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 3.9
+              (res) => res.info.avgRating > 4
             );
             setFilteredRestaurant(filteredList);
           }}
