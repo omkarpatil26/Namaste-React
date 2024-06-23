@@ -37,8 +37,6 @@ const Body = () => {
     return <h1>loading...</h1>;
   }
 
-  console.log("listOfRestaurants", listOfRestaurants);
-
   return (
     <div className="body">
       <div className="filter flex">
@@ -64,12 +62,10 @@ const Body = () => {
         <button
           className="px-4 py-2 bg-green-100 m-4 rounded-lg"
           onClick={() => {
-            console.log(searchText);
             const filteredRestaurant = listOfRestaurants.filter((res) =>
               res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
             setFilteredRestaurant(filteredRestaurant);
-            console.log(filteredRestaurant);
           }}
         >
           Search

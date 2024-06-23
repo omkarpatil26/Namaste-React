@@ -2,7 +2,6 @@ import React from "react";
 
 class UserClass extends React.Component {
   constructor(props) {
-    // console.log("child constructor");
     super(props);
 
     this.state = {
@@ -12,11 +11,9 @@ class UserClass extends React.Component {
         avatarURL: "https:dummyUrl",
       },
     };
-    //console.log(props);
   }
 
   async componentDidMount() {
-    //  console.log("child component did mount");
     const data = await fetch("https://api.github.com/users/omkarpatil26");
     const json = await data.json();
 
@@ -28,7 +25,6 @@ class UserClass extends React.Component {
   render() {
     //  const { name, location } = this.props;
     // const { count } = this.state;
-    // console.log("child render ");
     const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div className="user">
