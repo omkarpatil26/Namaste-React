@@ -8,6 +8,8 @@ const RestaurantMenu = () => {
 
   const resInfo = useRestaurantMenu(resId);
 
+  const [showIndex, setShowIndex] = useState(null);
+
   if (resInfo === null) return "loading...";
 
   const { name, cuisines, costForTwo } = resInfo?.cards[2]?.card?.card?.info;
@@ -22,6 +24,10 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
+  // const handleAccordion = () => {
+  //   showItems = !showItems;
+  // };
+
   return (
     <div className=" menu text -center">
       <h1 className=" text-[20px] text-center m-[10px] font-bold ">{name}</h1>
@@ -32,7 +38,11 @@ const RestaurantMenu = () => {
       {categories &&
         categories.map((category, index) => (
           <div key={index}>
-            <RestaurantCategory data={category?.card?.card} />
+            <RestaurantCategory
+              data={category?.card?.card}
+              showItems={index === showIndex ? true : false}
+              setShowIndex={() => setShowIndex(index)}
+            />
           </div>
         ))}
     </div>
