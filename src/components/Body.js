@@ -1,8 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 //import resObj from "../utils/mockData";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from ".src/utils/UserContext.js";
+import UserContext from "../../";
 
 const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
@@ -37,6 +39,8 @@ const Body = () => {
     return <h1>loading...</h1>;
   }
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return (
     <div className="body">
       <div className="filter flex">
@@ -70,6 +74,15 @@ const Body = () => {
         >
           Search
         </button>
+        <div className="mx-4">
+          <label>Context User :</label>
+          <input
+            type="text"
+            className="m-4 px-4 py-2 searchBox border border-solid border-black rounded-lg "
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          ></input>
+        </div>
       </div>
       <div className="res-container flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
