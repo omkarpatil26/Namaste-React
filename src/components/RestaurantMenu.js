@@ -24,10 +24,6 @@ const RestaurantMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  // const handleAccordion = () => {
-  //   showItems = !showItems;
-  // };
-
   return (
     <div className=" menu text -center">
       <h1 className=" text-[20px] text-center m-[10px] font-bold ">{name}</h1>

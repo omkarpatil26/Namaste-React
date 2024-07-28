@@ -23,21 +23,9 @@ class UserClass extends React.Component {
   }
 
   render() {
-    //  const { name, location } = this.props;
-    // const { count } = this.state;
     const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div className="user">
-        {/* <h2>count : {count}</h2> */}
-        {/* <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        > */}
-        {/* Click me!
-        </button> */}
         <img src={avatar_url}></img>
         <h3>Name : {name}</h3>
         <h3>location : {location}</h3>

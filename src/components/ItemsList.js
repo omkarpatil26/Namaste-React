@@ -18,10 +18,7 @@ const ItemList = (props) => {
           </div>
           <div className="w-3/12 p-4">
             <div className="absolute">
-              <button
-                className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg"
-                //onClick={() => handleAddItem(item)}
-              >
+              <button className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg">
                 Add +
               </button>
             </div>

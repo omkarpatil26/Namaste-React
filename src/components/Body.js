@@ -1,10 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
-//import resObj from "../utils/mockData";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from ".src/utils/UserContext.js";
-import UserContext from "../../";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
