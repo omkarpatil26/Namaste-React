@@ -7,8 +7,9 @@ import RestaurantCard from "./components/RestaurantCard";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-import { Provider } from "react-redux";
 import UserContext from "./utils/UserContext";
+//provider from redux
+import { Provider } from "react-redux";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
@@ -25,6 +26,7 @@ const AppLayout = () => {
   }, []);
 
   return (
+    //redux provider
     <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
       <div className="app">
         <Header />
