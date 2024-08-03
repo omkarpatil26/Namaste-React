@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import RestaurantMenu from "../utils/UserContext";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnState, setBtnState] = useState("Login");
   const networkStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log("cartitems", cartItems);
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg mb-2 sm:bg-yellow-100">
       <div className="logo-container">
@@ -30,7 +33,7 @@ const Header = () => {
           </li>
           <li className="px-4">
             {" "}
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart - {cartItems.length} items</Link>
           </li>
           <li className="px-4">
             {" "}
