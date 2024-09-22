@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Contact from "./components/Contact";
-import RestaurantCard from "./components/RestaurantCard";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
@@ -12,6 +11,7 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import "./index.css";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
@@ -42,15 +42,15 @@ const AppLayout = () => {
 
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/Namaste-React",
     element: <AppLayout />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Body />,
       },
       {
-        path: "/about",
+        path: "about",
         element: (
           <Suspense fallback={<h1>About loading...</h1>}>
             <About />
@@ -58,15 +58,15 @@ const appRouter = createBrowserRouter([
         ),
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contact />,
       },
       {
-        path: "/restaurant/:resId",
+        path: "restaurant/:resId",
         element: <RestaurantMenu />,
       },
       {
-        path: "/grocery",
+        path: "grocery",
         element: (
           <Suspense fallback={<h1>loading grocery..</h1>}>
             <Grocery />
@@ -75,7 +75,7 @@ const appRouter = createBrowserRouter([
       },
 
       {
-        path: "/cart",
+        path: "cart",
         element: <Cart />,
       },
     ],

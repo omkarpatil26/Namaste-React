@@ -2,7 +2,6 @@ import { LOGO_URL } from "../utils/constants";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import RestaurantMenu from "../utils/UserContext";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 
@@ -21,23 +20,25 @@ const Header = () => {
         <ul className="flex p-4 m-5">
           <li>Online status : {networkStatus ? "✅" : "🔴"}</li>
           <li className="px-4">
-            <Link to="/">Home</Link>
+            <Link to="/Namaste-React">Home</Link>
           </li>
           <li className="px-4">
             {" "}
-            <Link to="/about">About Us</Link>
+            <Link to="/Namaste-React/about">About Us</Link>
           </li>
           <li className="px-4">
             {" "}
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/Namaste-React/contact">Contact Us</Link>
           </li>
           <li className="px-4">
             {" "}
-            <Link to="/cart">Cart - {cartItems.length} items</Link>
+            <Link to="/Namaste-React/cart">
+              Cart - {cartItems.length} items
+            </Link>
           </li>
           <li className="px-4">
             {" "}
-            <Link to="/grocery">Grocery</Link>
+            <Link to="/Namaste-React/grocery">Grocery</Link>
           </li>
           <button
             onClick={() =>
