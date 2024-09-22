@@ -1,2 +1,0 @@
-var e=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire164e;(0,e.register)("7kZKn",function(n,r){Object.defineProperty(n.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(n.exports,"default",{get:function(){return o},set:void 0,enumerable:!0,configurable:!0});var i=e("5aRSq"),o=()=>(0,i.jsx)("div",{children:(0,i.jsx)("h1",{children:"we can bundle grocery - swiggy instamart app here!"})})});
-//# sourceMappingURL=Grocery.0943b33a.js.map
