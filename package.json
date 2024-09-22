@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "this is namaste react by Omi",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
