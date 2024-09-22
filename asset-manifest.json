@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Namaste-React/static/css/main.179e91a6.css",
+    "main.js": "/Namaste-React/static/js/main.49e7afef.js",
+    "static/js/70.afca5113.chunk.js": "/Namaste-React/static/js/70.afca5113.chunk.js",
+    "static/js/971.d16be116.chunk.js": "/Namaste-React/static/js/971.d16be116.chunk.js",
+    "index.html": "/Namaste-React/index.html",
+    "main.179e91a6.css.map": "/Namaste-React/static/css/main.179e91a6.css.map",
+    "main.49e7afef.js.map": "/Namaste-React/static/js/main.49e7afef.js.map",
+    "70.afca5113.chunk.js.map": "/Namaste-React/static/js/70.afca5113.chunk.js.map",
+    "971.d16be116.chunk.js.map": "/Namaste-React/static/js/971.d16be116.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.179e91a6.css",
+    "static/js/main.49e7afef.js"
+  ]
+}
