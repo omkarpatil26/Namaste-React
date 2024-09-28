@@ -85,7 +85,7 @@ const Body = () => {
       <div className="res-container flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
           <Link
-            to={"/restaurant/" + restaurant.info.id}
+            to={"/Namaste-React/restaurant/" + restaurant.info.id}
             key={restaurant.info.id}
           >
             <RestaurantCard resData={restaurant} />
